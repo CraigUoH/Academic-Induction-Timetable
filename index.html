@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Academic Structure</title>
+
+    <!-- ================================== -->
+    <!-- ============== CSS =============== -->
+    <!-- ================================== -->
+    <style>
+        /* Basic styles for the article body */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* --- Search Box Styles --- */
+        .search-container {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .results-counter {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+            min-height: 1.2em; /* Prevents layout shift when text appears */
+        }
+
+        /* --- Accordion Styles --- */
+        details {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        details details {
+            margin-left: 25px;
+            margin-top: 10px;
+            background-color: #fff;
+        }
+
+        details details details {
+            background-color: #f9f9f9;
+        }
+
+        summary {
+            font-weight: bold;
+            font-size: 1.2em;
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: "►";
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            transform: rotate(0deg);
+            transition: transform 0.2s ease;
+        }
+
+        details[open] > summary::before {
+            transform: rotate(90deg);
+        }
+
+        .accordion-content {
+            padding-left: 25px;
+            padding-top: 10px;
+        }
+
+        .accordion-content p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================================== -->
+    <!-- =========== HTML BODY ============ -->
+    <!-- ================================== -->
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search for a faculty, school, or course...">
+        <div class="results-counter"></div>
+    </div>
+    
+    <div id="accordion-container">
+        <!-- Faculty of Arts, Cultures and Education / Business, Law and Politics (Name TBC) -->
+        <details>
+            <summary>Faculty of Arts, Cultures and Education / Business, Law and Politics (Name TBC)</summary>
+            <div class="accordion-content">
+                
+                <!-- School of Arts and Humanities -->
+                <details>
+                    <summary>School of Arts and Humanities</summary>
+                    <div class="accordion-content">
+                        <p>This new school combines subjects from the former School of the Arts and School of Humanities.</p>
+                        <details><summary>American Studies</summary><div class="accordion-content"><p>Details for the American Studies course area.</p></div></details>
+                        <details><summary>Creative Writing</summary><div class="accordion-content"><p>Details for the Creative Writing course area.</p></div></details>
+                        <details><summary>Drama</summary><div class="accordion-content"><p>Details for the Drama course area.</p></div></details>
+                        <details><summary>English</summary><div class="accordion-content"><p>Details for the English course area.</p></div></details>
+                        <details><summary>History</summary><div class="accordion-content"><p>Details for the History course area.</p></div></details>
+                        <details><summary>Music</summary><div class="accordion-content"><p>Details for the Music course area.</p></div></details>
+                        <details><summary>Screen</summary><div class="accordion-content"><p>Details for the Screen course area.</p></div></details>
+                    </div>
+                </details>
+
+                <!-- School of Law, Criminology and Politics -->
+                <details>
+                    <summary>School of Law, Criminology and Politics</summary>
+                    <div class="accordion-content">
+                        <p>This new school combines subjects from the former Law School, School of Politics and International Studies, and School of Criminology, Sociology and Policing.</p>
+                        <details><summary>Criminology</summary><div class="accordion-content"><p>Details for the Criminology course area.</p></div></details>
+                        <details><summary>Law</summary><div class="accordion-content"><p>Details for the Law course area.</p></div></details>
+                        <details><summary>Policing</summary><div class="accordion-content"><p>Details for the Policing course area.</p></div></details>
+                        <details><summary>Politics and Philosophy</summary><div class="accordion-content"><p>Details for the Politics and Philosophy course area.</p></div></details>
+                        <details><summary>Sociology</summary><div class="accordion-content"><p>Details for the Sociology course area.</p></div></details>
+                    </div>
+                </details>
+                
+                <!-- School of Education -->
+                <details>
+                    <summary>School of Education (Existing)</summary>
+                    <div class="accordion-content">
+                        <details><summary>Education Studies</summary><div class="accordion-content"><p>Details for the Education Studies course area.</p></div></details>
+                        <details><summary>Teacher Education</summary><div class="accordion-content"><p>Details for the Teacher Education course area.</p></div></details>
+                        <details><summary>TESOL</summary><div class="accordion-content"><p>Details for the TESOL course area.</p></div></details>
+                    </div>
+                </details>
+                
+                <!-- Wilberforce Institute -->
+                <details>
+                    <summary>Wilberforce Institute (Existing)</summary>
+                    <div class="accordion-content"><p>Content for the Wilberforce Institute.</p></div>
+                </details>
+            </div>
+        </details>
+
+        <!-- Faculty of Health Sciences -->
+        <details>
+            <summary>Faculty of Health Sciences</summary>
+            <div class="accordion-content">
+                
+                <!-- School of Healthcare -->
+                <details>
+                    <summary>School of Healthcare (New)</summary>
+                    <div class="accordion-content">
+                        <p>Merger of the former School of Nursing and Midwifery and the School of Paramedical, Perioperative and Advanced Practice.</p>
+                        <details><summary>Advanced Practice</summary><div class="accordion-content"><p>Details for the Advanced Practice course area.</p></div></details>
+                        <details><summary>Institute for Clinical and Applied Health Research (Nursing)</summary><div class="accordion-content"><p>Details for this research institute area.</p></div></details>
+                        <details><summary>Mental Health and Learning Disabilities Nursing</summary><div class="accordion-content"><p>Details for the Mental Health and Learning Disabilities Nursing course area.</p></div></details>
+                        <details><summary>Nursing and Midwifery</summary><div class="accordion-content"><p>Details for the Nursing and Midwifery course area.</p></div></details>
+                        <details><summary>Paramedic Science</summary><div class="accordion-content"><p>Details for the Paramedic Science course area.</p></div></details>
+                        <details><summary>Perioperative Care</summary><div class="accordion-content"><p>Details for the Perioperative Care course area.</p></div></details>
+                    </div>
+                </details>
+                
+                <!-- School of Psychology and Social Work -->
+                <details>
+                    <summary>School of Psychology and Social Work (Existing)</summary>
+                    <div class="accordion-content">
+                        <details><summary>Clinical Psychology</summary><div class="accordion-content"><p>Details for the Clinical Psychology course area.</p></div></details>
+                        <details><summary>Cognitive Behavioural Therapy</summary><div class="accordion-content"><p>Details for the Cognitive Behavioural Therapy course area.</p></div></details>
+                        <details><summary>Psychology</summary><div class="accordion-content"><p>Details for the Psychology course area.</p></div></details>
+                        <details><summary>Social Work</summary><div class="accordion-content"><p>Details for the Social Work course area.</p></div></details>
+                    </div>
+                </details>
+                
+                <!-- School of Sport, Exercise and Rehabilitation Sciences -->
+                <details>
+                    <summary>School of Sport, Exercise and Rehabilitation Sciences (Existing)</summary>
+                    <div class="accordion-content">
+                        <details><summary>Nutrition and Dietetics</summary><div class="accordion-content"><p>Details for the Nutrition and Dietetics course area.</p></div></details>
+                        <details><summary>Physiotherapy</summary><div class="accordion-content"><p>Details for the Physiotherapy course area.</p></div></details>
+                        <details><summary>Sport Health and Exercise Science (SHES)</summary><div class="accordion-content"><p>Details for the SHES course area.</p></div></details>
+                    </div>
+                </details>
+                
+                <!-- Hull York Medical School -->
+                <details>
+                    <summary>Hull York Medical School (Existing)</summary>
+                    <div class="accordion-content">
+                        <details><summary>Hull York Medical School</summary><div class="accordion-content"><p>Details for the Hull York Medical School course area.</p></div></details>
+                        <details><summary>Institute for Clinical and Applied Health Research (HYMS)</summary><div class="accordion-content"><p>Details for this research institute area.</p></div></details>
+                    </div>
+                </details>
+
+                 <!-- Additional Health Folders -->
+                <details>
+                    <summary>Additional Health Institutes & Centres</summary>
+                    <div class="accordion-content">
+                        <details><summary>Academy of Primary Care</summary><div class="accordion-content"><p>Content for the Academy of Primary Care.</p></div></details>
+                        <details><summary>Centre for Biomedicine</summary><div class="accordion-content"><p>Content for the Centre for Biomedicine.</p></div></details>
+                        <details><summary>Hull Health Trials Unit</summary><div class="accordion-content"><p>Content for the Hull Health Trials Unit.</p></div></details>
+                        <details><summary>Wolfson Palliative Care Research Group</summary><div class="accordion-content"><p>Content for the Wolfson Palliative Care Research Group.</p></div></details>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <!-- Faculty of Science and Engineering -->
+        <details>
+            <summary>Faculty of Science and Engineering</summary>
+            <div class="accordion-content">
+
+                <!-- School of Computing, Maths, Physics and DAIM -->
+                <details>
+                    <summary>School of Computing, Maths, Physics and DAIM (Name TBC)</summary>
+                    <div class="accordion-content">
+                        <p>Combines the former School of Computer Science, the Data Science AI and Modelling Centre (DAIM), and the Physics and Mathematics departments from the dissolved School of Natural Sciences.</p>
+                        <details><summary>Computer Science & Related Programmes</summary><div class="accordion-content"><p>Includes Artificial Intelligence, Computer Science, Games Programming, Robotics and AI, and Software Engineering.</p></div></details>
+                        <details><summary>Data Science AI and Modelling Centre (DAIM)</summary><div class="accordion-content"><p>Content for the Data Science AI and Modelling Centre.</p></div></details>
+                        <details><summary>Mathematics</summary><div class="accordion-content"><p>Details for the Mathematics course area.</p></div></details>
+                        <details><summary>Physics</summary><div class="accordion-content"><p>Details for the Physics course area.</p></div></details>
+                    </div>
+                </details>
+
+                <!-- School of Engineering and Technology -->
+                <details>
+                    <summary>School of Engineering and Technology (Name TBC)</summary>
+                    <div class="accordion-content">
+                        <p>Combines the former School of Engineering with Chemical and Medical engineering disciplines.</p>
+                        <details><summary>Mechanical Engineering</summary><div class="accordion-content"><p>Details for the Mechanical Engineering course area.</p></div></details>
+                        <details><summary>Chemical Engineering</summary><div class="accordion-content"><p>Details for the Chemical Engineering course area.</p></div></details>
+                        <details><summary>Medical Engineering</summary><div class="accordion-content"><p>Details for the Medical Engineering course area.</p></div></details>
+                    </div>
+                </details>
+
+                <!-- School of Environmental and Life Sciences -->
+                <details>
+                    <summary>School of Environmental and Life Sciences (Name TBC)</summary>
+                    <div class="accordion-content">
+                        <p>Combines the former School of Environmental Sciences with Biology, Marine Science, and Geology from the dissolved School of Natural Sciences.</p>
+                        <details><summary>Biology, Biochemistry and Zoology</summary><div class="accordion-content"><p>Details for the Biology, Biochemistry and Zoology course area.</p></div></details>
+                        <details><summary>Chemistry</summary><div class="accordion-content"><p>Details for the Chemistry course area.</p></div></details>
+                        <details><summary>Geography and Environment</summary><div class="accordion-content"><p>Details for the Geography and Environment course area.</p></div></details>
+                        <details><summary>Geology</summary><div class="accordion-content"><p>Details for the Geology course area.</p></div></details>
+                        <details><summary>Marine Science</summary><div class="accordion-content"><p>Details for the Marine Science course area.</p></div></details>
+                    </div>
+                </details>
+                
+                <!-- Energy and Environment Institute -->
+                <details>
+                    <summary>Energy and Environment Institute (Existing)</summary>
+                    <div class="accordion-content"><p>Content for the Energy and Environment Institute.</p></div>
+                </details>
+
+            </div>
+        </details>
+
+        <!-- Freestanding and Cross-Faculty -->
+        <!-- Hull University Business School -->
+        <details>
+            <summary>Hull University Business School (Freestanding)</summary>
+            <div class="accordion-content">
+                <p>Previously part of the Faculty of Business, Law & Politics. Now reports to DVC.</p>
+                <details><summary>Business and Management Courses</summary><div class="accordion-content"><p>Details for courses offered by the Business School.</p></div></details>
+            </div>
+        </details>
+
+        <!-- PGR (Postgraduate Research) -->
+        <details>
+            <summary>PGR (Postgraduate Research)</summary>
+            <div class="accordion-content">
+                <details><summary>Aura Centre for Doctoral Training</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+                <details><summary>Aura Centre for Doctoral Training PGDip (Energy and Environment Institute)</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+                <details><summary>Centre for Water Cultures (Energy and Environment Institute)</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+                <details><summary>EEI (Energy and Environment Institute)</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+                <details><summary>EEI PGR Continuing Students</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+                <details><summary>Energy and Environment Institute - PGR</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+                <details><summary>Energy and Environment Institute - Postgraduate Taught</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+                <details><summary>Nerc Panorama DTP (Energy and Environment Institute)</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+                <details><summary>Olympus Cluster (Energy and Environment Institute)</summary><div class="accordion-content"><p>Content for this section.</p></div></details>
+            </div>
+        </details>
+        
+        <!-- Foundation Year -->
+        <details>
+            <summary>Foundation Year</summary>
+            <div class="accordion-content">
+                <details><summary>FACE Foundation</summary><div class="accordion-content"><p>Foundation Year information for the Faculty of Arts, Cultures and Education.</p></div></details>
+                <details><summary>FBLP Foundation</summary><div class="accordion-content"><p>Foundation Year information for the Faculty of Business, Law and Politics.</p></div></details>
+                <details><summary>FHS Foundation</summary><div class="accordion-content"><p>Foundation Year information for the Faculty of Health Sciences.</p></div></details>
+                <details><summary>FOSE Foundation</summary><div class="accordion-content"><p>Foundation Year information for the Faculty of Science and Engineering.</p></div></details>
+            </div>
+        </details>
+
+        <!-- Student Start -->
+        <details>
+            <summary>Student Start</summary>
+            <div class="accordion-content">
+                <p>Content related to Student Start.</p>
+            </div>
+        </details>
+    </div>
+
+
+    <!-- ================================== -->
+    <!-- ========== JAVASCRIPT ========== -->
+    <!-- ================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find the search input and the main container for all accordions
+            const searchInput = document.querySelector('.search-box');
+            const container = document.getElementById('accordion-container');
+            const resultsCounter = document.querySelector('.results-counter');
+            
+            // Check if all required elements exist before proceeding
+            if (!searchInput || !container || !resultsCounter) {
+                console.error("Search components not found. Please ensure search input, accordion container, and results counter exist in the HTML.");
+                return;
+            }
+            
+            // Get all <details> elements for filtering
+            const allDetails = Array.from(container.querySelectorAll('details'));
+
+            // Function to reset the view to its initial state
+            function resetView() {
+                allDetails.forEach(details => {
+                    details.style.display = ''; // Reset display property
+                    details.open = false;       // Close all accordions
+                });
+                resultsCounter.textContent = '';
+            }
+
+            // Recursive function to filter accordions
+            function filterAccordions(element, query) {
+                // Check if the element's own text content matches the query.
+                // We look at the content of the <summary> and any direct <p> tags.
+                const summaryText = element.querySelector(':scope > summary')?.textContent.toLowerCase() || '';
+                const contentParagraphs = Array.from(element.querySelectorAll(':scope > .accordion-content > p')).map(p => p.textContent.toLowerCase()).join(' ');
+                
+                const elementText = summaryText + ' ' + contentParagraphs;
+                const isTextMatch = elementText.includes(query);
+
+                // Now, recursively check the children <details> elements
+                let hasChildMatch = false;
+                const childDetails = Array.from(element.querySelectorAll(':scope > .accordion-content > details'));
+                
+                childDetails.forEach(child => {
+                    // If a child (or its descendants) is a match, then this parent is also a match
+                    if (filterAccordions(child, query)) {
+                        hasChildMatch = true;
+                    }
+                });
+
+                // Determine if this element should be visible
+                const isMatch = isTextMatch || hasChildMatch;
+
+                // Show/hide the element based on the match status
+                element.style.display = isMatch ? '' : 'none';
+
+                // If it's a match because of a child, make sure this parent is open to reveal the child
+                if (hasChildMatch && isMatch) {
+                    element.open = true;
+                }
+
+                return isMatch;
+            }
+
+            function handleSearch() {
+                const query = searchInput.value.trim().toLowerCase();
+
+                // If the search box is cleared, reset everything
+                if (query.length === 0) {
+                    resetView();
+                    return;
+                }
+
+                let topLevelMatchCount = 0;
+                // We only need to run the filter on the top-level <details> elements
+                const topLevelDetails = container.querySelectorAll(':scope > details');
+                
+                topLevelDetails.forEach(details => {
+                    if (filterAccordions(details, query)) {
+                        topLevelMatchCount++;
+                    }
+                });
+                
+                if (topLevelMatchCount > 0) {
+                    const categoryText = topLevelMatchCount === 1 ? 'category' : 'categories';
+                    resultsCounter.textContent = `Showing ${topLevelMatchCount} relevant main ${categoryText}.`;
+                } else {
+                    resultsCounter.textContent = 'No results found.';
+                }
+            }
+
+            // Listen for input on the search box for a reactive experience
+            searchInput.addEventListener('input', handleSearch);
+        });
+    </script>
+</body>
+</html>
